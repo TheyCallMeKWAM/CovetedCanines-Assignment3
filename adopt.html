@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="adopt.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+    
+    <title>Coveted Canines</title>
+
+    <div class="navBar">
+      <table class="navbarItems">
+        <tr>
+          <td><img id="navImg" src="images/CCR.png"></li></td>
+          <td><a href="index.html">Home</a></td>
+          <td><a href="about.html">About</a></td>
+          <td><a class="active" href="#top">Adopt</a></td>
+          <td><a href="lineup.html">Foster</a></td>
+          <td><a href="lineup.html">Contact</a></td>
+          <td><div id="myDiv"><button class="open-button" value="Signed In as Admin" id="signIn" onclick="openForm()">Sign In</button></div></td>
+        </tr>
+      </table>
+    </div>
+</head>
+
+<body>
+    <script src="JSFiles/index.js"></script>
+    <div class="form-popup" id="myForm">
+    <form class="form-container" onsubmit="return check()">
+      <h1>Login</h1>
+  
+      <label for="email"><b>Email</b></label><br>
+      <input id="usernameInput" type="text" placeholder="Enter Email (admin@guelphhumber.ca)" name="email" maxlength="50" required><br>
+  
+      <label for="psw"><b>Password</b></label><br>
+      <input id="passwordInput" type="password" placeholder="Enter Password (admin)" name="psw"  maxlength="24" required><br>
+  
+      <button type="submit" class="btn">Login</button>
+      
+      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+  </div>
+  <script>
+      function check()
+        {
+            let user=document.getElementById("usernameInput").value;
+            let pass=document.getElementById("passwordInput").value;
+            if(user=="admin@guelphhumber.ca" && pass=="admin")
+            {
+                alert("Login Sucsessful");
+                return true;
+                
+            }
+            else
+            {
+                alert("Incorrect Username or Password, Please Try Again");
+                return false;
+            }
+
+        }
+  </script>
+ 
+    <div class="bodyPara">
+        <h1>Why Adopt</h1>
+        <p>At CCCR, we value creating on-going relationships with our adopters. We understand that there are <br>
+            challenges in any transition – so we don’t want you to feel like you’re doing this on your own. Our <br>
+            community of volunteers, rescue workers, experts and adopters are part of the extended family you <br>
+            join when you adopt from us.</p>
+        <h1>How to Adopt</h1>
+        <p>New dogs arrive on a regular basis. If you are interested in adopting, regularly check our website,<br> 
+            Facebook and Instagram pages. Available dogs with their bios will be posted across all three <br>
+            platforms. If you are interested in adopting, you will be required to complete an application.</p> <br>
+    </div>
+
+
+
+    <div class="cardSection">
+      <div class="card">
+        <img src="images/frankie.jpeg" alt="FRANKIE" class="card-image" onclick="change1()">
+        <h3 class="card-title">FRANKIE</h3>
+      </div>
+      <div class="card">
+        <img src="images/panda.jpeg" alt="PANDA" class="card-image" onclick="change2()">
+        <h3 class="card-title">PANDA</h3>
+      </div>
+      <div class="card">
+        <img src="images/bella.png" alt="BELLA" class="card-image" onclick="change3()">
+        <h3 class="card-title">BELLA</h3>
+      </div>
+      <div class="card">
+        <img src="images/nuro.jpeg" alt="NURO" class="card-image" onclick="change4()">
+        <h3 class="card-title">NURO</h3>
+      </div>
+      <div class="card">
+        <img src="images/pepper.jpeg" alt="PEPPER" class="card-image" onclick="change5()">
+        <h3 class="card-title">PEPPER</h3>
+      </div>
+      <div class="card">
+        <img src="images/cici.jpeg" alt="CICI" class="card-image" onclick="change6()">
+        <h3 class="card-title">CICI</h3>
+      </div>
+    </div>
+
+    <div class="adoptText">
+        <h1 id="dogTitle">FRANKIE</h1>
+        <img id="dogImg" src="images/frankie.jpeg"> 
+        <p id="dogPara">HIYA!  You’ve heard of Frankie Goes to Hollywood - my name is Frankie too <br> and all I want is to go HOME! I’m an adorable dude (if I do say so myself!), <br> who wants a place to call my own and rest my head.  If you are looking for a fuzzy face, a <br> go-go-go bundle of energy followed by cuddles then look no <br> further - I am right here!  Whether it’s a long hike, walk, run, or crazy <br> zoomies in the snow, this is what I do best.</p>
+    </div>
+    
+    <script>
+        function change1(){
+            var answer = "FRANKIE"
+            var spot = document.getElementById("dogTitle")
+            spot.innerHTML = answer;
+
+            document.getElementById("dogImg").src="images/frankie.jpeg";
+
+            var answer = "HIYA!  You’ve heard of Frankie Goes to Hollywood - my name is Frankie too <br> and all I want is to go HOME! I’m an adorable dude (if I do say so myself!), <br> who wants a place to call my own and rest my head.  If you are looking for a fuzzy face, a <br> go-go-go bundle of energy followed by cuddles then look no <br> further - I am right here!  Whether it’s a long hike, walk, run, or crazy <br> zoomies in the snow, this is what I do best. "
+            var spot = document.getElementById("dogPara")
+            spot.innerHTML = answer;
+        }
+        function change2(){
+            var answer = "PANDA"
+            var spot = document.getElementById("dogTitle")
+            spot.innerHTML = answer;
+
+            document.getElementById("dogImg").src="images/panda.jpeg";
+
+            var answer = "Meet Panda! Panda is a lovable, energetic puppy with lots of affection to <br> give everyone. There isn't anything he won't try putting in his mouth! He <br> loves to run, play fetch and IF you manage to tire him out he can be a very <br> good cuddler. Panda likes to sleep at the foot of your bed or at your door. <br> His attention span can be compared to a goldfish, and he can frequently <br> lose his train of thought even when playing before switching to chewing on <br> a chair leg or the wall or your hand or run across the room into the wall! His <br> favourite play fight move is the body-check and he is aspiring to join the <br> Toronto Marlies as a backup defenseman."
+            var spot = document.getElementById("dogPara")
+            spot.innerHTML = answer;
+        }
+        function change3(){
+            var answer = "BELLA"
+            var spot = document.getElementById("dogTitle")
+            spot.innerHTML = answer;
+
+            document.getElementById("dogImg").src="images/bella.png";
+
+            var answer = "Meet Bella! She is as beautiful as her name! Bella loves her walks in all <br> kinds of weather and loves to play with her toys with you when at <br> home. Bella also loves to burn some energy by playing outside as well <br> and will run on leash at the park! She is totally fine being a big city girl <br> and is chill with all the sights and sounds of busy streets. Though she <br> can pull on leash she is working on leash manners but knows to stay <br> when she is asked before crossing the road. She certainly struts her <br> stuff in her winter booties! Having learned to accept them to protect <br> her precious paws from salty city sidewalks. Bella is also learning not <br> to jump up when she’s excited to see her people. She is a smart <br> cookie though! She has already learned to stay in her crate overnight <br> or when left for a few hours without issue. Though she is also <br> non-destructive when out of her crate. Bella will win your heart when <br> she gives you her paw to “hold hands” or rolls onto her back for belly <br> rubs!"
+            var spot = document.getElementById("dogPara")
+            spot.innerHTML = answer;
+        }
+        function change4(){
+            var answer = "NURO"
+            var spot = document.getElementById("dogTitle")
+            spot.innerHTML = answer;
+
+            document.getElementById("dogImg").src="images/nuro.jpeg";
+
+            var answer = "Puppy lovebug alert! This affectionate pup promises to be a snuggly friend  <br> for life. Nuro is a big, silly cuddly boy with lots of puppy energy. He is  <br> sweet and playful and loves to use his extra energy by playing with  <br> toys, toys and more toys! Nuro loves to run around and would do well  <br> in a home that has a space for him to run around in. He loves to burn  <br> energy outdoors too, but does need some coaxing to go outside <br> during the cold winter months (who can blame him)."
+            var spot = document.getElementById("dogPara")
+            spot.innerHTML = answer;
+        }
+        function change5(){
+            var answer = "PEPPER"
+            var spot = document.getElementById("dogTitle")
+            spot.innerHTML = answer;
+
+            document.getElementById("dogImg").src="images/pepper.jpeg";
+
+            var answer = "Pepper is an outstanding, special dog with a truly sparkly and loving <br> personality. He's sweet, clever, and wants to learn. That's why it's so <br> important that energetic Pepper ends up with a family who already has <br> experience shaping dogs into good canine citizens. His best case <br> scenario is a home with a fenced yard,  balanced, playful dog sibling, <br> and owners who can provide consistent boundaries and love!"
+            var spot = document.getElementById("dogPara")
+            spot.innerHTML = answer;
+        }
+        function change6(){
+            var answer = "CICI"
+            var spot = document.getElementById("dogTitle")
+            spot.innerHTML = answer;
+
+            document.getElementById("dogImg").src="images/cici.jpeg";
+
+            var answer = "Hello, World! Meet our newest addition, sweet, sweet Cici! These loveable  <br> little pug mix is settling in comfortably in foster care, but wants to kick  <br> up her paws in her forever home. This is a girl who LOVES being  <br> around her people, maybe a bit too much. Cici has been displaying  <br> some separation anxiety and can be vocal when left alone. An ideal  <br> home has someone who can take her to work with them or if they  <br> work from home, but also someone who will commit to helping Cici  <br> overcome this issue."
+            var spot = document.getElementById("dogPara")
+            spot.innerHTML = answer;
+        }
+    </script>
+  
+  
+  
+    <div class="footer">
+        <table>
+          <tr>
+            <td class="container"><img src="images/email.png" alt="email"></td>
+            <td class="container">INFO@COVETEDCANINES.ORG |</td>
+            <td class="container"><img src="images/phone-call.png" alt="phone" ></td>
+            <td class="container">(855) 801-5706 |</td>
+            <td class="container"><img src="images/pin.png" alt="email"></td>
+            <td class="container">81-800 Avenue 51, Indio, CA 92201</td>
+            </tr>
+        </table>
+              
+        <p id="missionPara">Coveted Canines and Creatures is a not-for-profit organization that rescues animals that are at high risk of <br>
+           being euthanized and are vulnerable to abuse. We are run wholly run by unpaid volunteers who donate their <br>
+           time and expertise for the love of animals.</p>
+        
+        <table id=socialsTable>  
+          <tr>
+            <td class="container"><a href="https://twitter.com/covetedcanines" target="_blank"><img id="socialImg" src="images/twitter.png" alt="twitter icon"></a></td>
+            <td class="container"><a href="https://www.facebook.com/covetedcanines/" target="_blank"><img id="socialImg" src="images/facebook.png" alt="facebook icon"></a></td>
+            <td class="container"><a href="https://www.instagram.com/covetedcanines/" target="_blank"><img id="socialImg" src="images/instagram.png" alt="instagram"></a></td>
+          </tr>
+      </table>
+      <table>
+        <tr>
+          <td id="footerInfo" colspan="2"><p id="footerPara">&copy;Coveted Canines  - All Rights Reserved | Privacy Policy </p></td>
+        </tr>
+        <tr>
+        <td id="footerInfo" colspan="7"><p id="footerPara"> Assignment 3 - Jasmyn Butt, Alessia Caracciolo, William Sampson - MDST*3250</p></td>
+      </tr>    
+      </table>
+      </div>
+      
+</body>
+</html>

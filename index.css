@@ -58,6 +58,7 @@ a:hover{
 
 
 
+ /* Login PopUp Page */
 .open-button {
    background-color: #555;
    color: white;
@@ -113,12 +114,6 @@ a:hover{
 .form-container .btn:hover, .open-button:hover {
    opacity: 1;
 }
-
-
-
-
-
-
 
 
 
@@ -198,11 +193,6 @@ a:hover{
    text-shadow: 0 0 1px 
    rgba(0, 0, 0, .5);
 }
-
-
-
-
-
 
 
 /* Footer Seciton */
