@@ -16,10 +16,12 @@
  .navBar {
     position:-webkit-sticky;
     position: sticky;
+    flex-shrink: 2;
     top: 0;
      width: auto;
     height: auto;
     z-index: 10;
+    overflow-x: auto;
  
     background-color: rgb(36, 36, 36);
  }
