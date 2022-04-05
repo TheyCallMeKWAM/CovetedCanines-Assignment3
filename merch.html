@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="merch.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+    
+    <title>Coveted Canines - Merch</title>
+
+    <div class="navBar">
+      <table class="navbarItems">
+        <tr>
+          <td><img id="navImg" src="images/CCR.png"></li></td>
+          <td><a href="index.html">Home</a></td>
+          <td><a href="about.html">About</a></td>
+          <td><a href="adopt.html">Adopt</a></td>
+          <td><a href="foster.html">Foster</a></td>
+          <td><a class="active" href="#top">Merch</a></td>
+          <td><div id="myDiv"><button class="open-button" value="Signed In as Admin" id="signIn" onclick="openForm()">Sign In</button></div></td>
+        </tr>
+      </table>
+    </div>
+</head>
+
+<body>
+    <script src="JSFiles/index.js"></script>
+    <div class="form-popup" id="myForm">
+    <form class="form-container" onsubmit="return check()">
+      <h1>Login</h1>
+  
+      <label for="email"><b>Email</b></label><br>
+      <input id="usernameInput" type="text" placeholder="Enter Email (admin@guelphhumber.ca)" name="email" maxlength="50" required><br>
+  
+      <label for="psw"><b>Password</b></label><br>
+      <input id="passwordInput" type="password" placeholder="Enter Password (admin)" name="psw"  maxlength="24" required><br>
+  
+      <button type="submit" class="btn">Login</button>
+      
+      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+  </div>
+  <script>
+      function check()
+        {
+            let user=document.getElementById("usernameInput").value;
+            let pass=document.getElementById("passwordInput").value;
+            if(user=="admin@guelphhumber.ca" && pass=="admin")
+            {
+                alert("Login Sucsessful");
+                return true;
+                
+            }
+            else
+            {
+                alert("Incorrect Username or Password, Please Try Again");
+                return false;
+            }
+
+        }
+  </script>
+ 
+    <div class="bodyPara">
+        <h1>Coveted Canines Merch Store</h1>
+        <p>All of the merch purchased on this page directly funds our programs and events to help us run more. Consider purhcasing some today!</p>
+    </div>
+        <table class="merchTable">
+            <tr>
+                <td><img src="images/shirt1.png" title="shirt1" class="merchItem" alt="shirt1"></td>
+                <td><img src="images/shirt2.png" title="shirt1" class="merchItem" alt="shirt1"></td>
+                <td><img src="images/shirt3.png" title="shirt1" class="merchItem" alt="shirt1"></td>
+            </tr>
+            <tr>
+                <td>Price: $25</td>
+                <td>Price: $32</td>
+                <td>Price: $26</td>
+            </tr>
+            <tr>
+                <td>Quantity: <input type="number" id="item1" min="1" max="10"><br> </td>
+                <td>Quantity: <input type="number" id="item2" min="1" max="10"><br> </td>
+                <td>Quantity: <input type="number" id="item3" min="1" max="10"><br> </td>
+            </tr>
+            <tr>
+                <td><input type="button" value="Add to Cart" onclick="item1_added()"></td>
+                <td><input type="button" value="Add to Cart" onclick="item2_added()"></td>
+                <td><input type="button" value="Add to Cart" onclick="item3_added()"></td>
+            </tr>
+            <tr>
+                <td><img src="images/shirt4.png" title="shirt4" class="merchItem" alt="shirt4"></td>
+                <td><img src="images/mug.png" title="mug1" class="merchItem" alt="mug1"></td>
+                <td><img src="images/mug2.png" title="mug2" class="merchItem" alt="mug2"></td>
+            </tr>
+            <tr>
+                <td>Price: $20</td>
+                <td>Price: $14</td>
+                <td>Price: $10</td>
+            </tr>
+            <tr>
+                <td>Quantity: <input type="number" id="item4" min="1" max="10"><br> </td>
+                <td>Quantity: <input type="number" id="item5" min="1" max="10"><br> </td>
+                <td>Quantity: <input type="number" id="item6" min="1" max="10"><br> </td>
+            </tr>
+            <tr>
+                <td><input type="button" value="Add to Cart" onclick="item4_added()"></td>
+                <td><input type="button" value="Add to Cart" onclick="item5_added()"></td>
+                <td><input type="button" value="Add to Cart" onclick="item6_added()"></td>
+            </tr>
+        </table>
+
+        <div class="merchTotals">
+            <td><input type="button" value="Total bill" onclick="bill()"></td>
+            <td><input type="reset" value="Reset"></td>
+            <td><p id="p1"></p></td>
+        </div>    
+    <script>
+    function item1_added(){
+        if(document.getElementById("item1").value>0){
+            alert("Item added");
+        }
+        else{
+            alert("Add item to the cart");
+        }
+        
+      }
+      function item2_added(){
+        if(document.getElementById("item2").value>0){
+            alert("Item added");
+        }
+        else{
+            alert("Add item to the cart");
+        }
+        
+      }
+      function item3_added(){
+        if(document.getElementById("item3").value>0){
+            alert("Item added");
+        }
+        else{
+            alert("Add item to the cart");
+        }
+        
+      }
+      function item4_added(){
+        if(document.getElementById("item4").value>0){
+            alert("Item added");
+        }
+        else{
+            alert("Add item to the cart");
+        }
+        
+      }
+      function bill()
+      {
+          let itemno1=document.getElementById("item1").value;
+          let itemno2=document.getElementById("item2").value;
+          let itemno3=document.getElementById("item3").value;
+          let itemno4=document.getElementById("item4").value;
+          let itemno5=document.getElementById("item5").value;
+          let itemno6=document.getElementById("item6").value;
+          let total=itemno1*25+itemno2*32+itemno3*26+itemno4*20+itemno5*14+itemno6*10;
+          if(total==0){
+            document.getElementById("p1").textContent="No items in the cart";
+          }
+          else{
+            document.getElementById("p1").textContent="Your total bill is : $"+total;
+          }
+          
+      }
+    </script>
+
+
+  
+  
+  
+    <div class="footer">
+        <table>
+          <tr>
+            <td class="container"><img src="images/email.png" alt="email"></td>
+            <td class="container">INFO@COVETEDCANINES.ORG |</td>
+            <td class="container"><img src="images/phone-call.png" alt="phone" ></td>
+            <td class="container">(855) 801-5706 |</td>
+            <td class="container"><img src="images/pin.png" alt="email"></td>
+            <td class="container">81-800 Avenue 51, Indio, CA 92201</td>
+            </tr>
+        </table>
+              
+        <p id="missionPara">Coveted Canines and Creatures is a not-for-profit organization that rescues animals that are at high risk of <br>
+           being euthanized and are vulnerable to abuse. We are run wholly run by unpaid volunteers who donate their <br>
+           time and expertise for the love of animals.</p>
+        
+        <table id=socialsTable>  
+          <tr>
+            <td class="container"><a href="https://twitter.com/covetedcanines" target="_blank"><img id="socialImg" src="images/twitter.png" alt="twitter icon"></a></td>
+            <td class="container"><a href="https://www.facebook.com/covetedcanines/" target="_blank"><img id="socialImg" src="images/facebook.png" alt="facebook icon"></a></td>
+            <td class="container"><a href="https://www.instagram.com/covetedcanines/" target="_blank"><img id="socialImg" src="images/instagram.png" alt="instagram"></a></td>
+          </tr>
+      </table>
+      <table>
+        <tr>
+          <td id="footerInfo" colspan="2"><p id="footerPara">&copy;Coveted Canines  - All Rights Reserved | Privacy Policy </p></td>
+        </tr>
+        <tr>
+        <td id="footerInfo" colspan="7"><p id="footerPara"> Assignment 3 - Jasmyn Butt, Alessia Caracciolo, William Sampson - MDST*3250</p></td>
+      </tr>    
+      </table>
+      </div>
+      
+</body>
+</html>

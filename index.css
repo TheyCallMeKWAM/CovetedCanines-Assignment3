@@ -43,7 +43,7 @@ head,body{
 	color: #FFFFFF;
    font-size: 18px;
 }
-a:hover{
+.navBar a:hover{
 	background-color: lightgray;
 	color: #FFFFFF;
 }
@@ -124,6 +124,8 @@ a:hover{
 }
 .slideshow-container img {
    vertical-align: middle;
+   height: 600px;
+   width: 100%;
 }
 .slideshow-container {
   width: auto;

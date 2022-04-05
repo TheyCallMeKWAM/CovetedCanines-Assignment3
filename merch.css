@@ -124,15 +124,20 @@ h1{
 p{
     font-size: 18px;
 }
-.formTable{
+.merchTable{
     text-align: center;
     margin: 0 auto;
-    margin-bottom: 25px;
 }
-.formTable td{
-    padding: 10px 0 10px 0;
-    font-size: 18px;
+.merchItem{
+    width: 300px;
+    height: auto;
+    margin: 10px 15px 10px 15px;
 }
+.merchTotals{
+    text-align: center;
+    margin: 25px 0 25px 0;
+}
+
  
 
 
