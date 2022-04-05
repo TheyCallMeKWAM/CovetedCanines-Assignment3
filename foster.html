@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="foster.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+    
+    <title>Coveted Canines - Foster</title>
+
+    <div class="navBar">
+      <table class="navbarItems">
+        <tr>
+          <td><img id="navImg" src="images/CCR.png"></li></td>
+          <td><a href="index.html">Home</a></td>
+          <td><a href="about.html">About</a></td>
+          <td><a href="adopt.html">Adopt</a></td>
+          <td><a class="active" href="#top">Foster</a></td>
+          <td><a href="lineup.html">Contact</a></td>
+          <td><div id="myDiv"><button class="open-button" value="Signed In as Admin" id="signIn" onclick="openForm()">Sign In</button></div></td>
+        </tr>
+      </table>
+    </div>
+</head>
+
+<body>
+    <script src="JSFiles/index.js"></script>
+    <div class="form-popup" id="myForm">
+    <form class="form-container" onsubmit="return check()">
+      <h1>Login</h1>
+  
+      <label for="email"><b>Email</b></label><br>
+      <input id="usernameInput" type="text" placeholder="Enter Email (admin@guelphhumber.ca)" name="email" maxlength="50" required><br>
+  
+      <label for="psw"><b>Password</b></label><br>
+      <input id="passwordInput" type="password" placeholder="Enter Password (admin)" name="psw"  maxlength="24" required><br>
+  
+      <button type="submit" class="btn">Login</button>
+      
+      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+  </div>
+  <script>
+      function check()
+        {
+            let user=document.getElementById("usernameInput").value;
+            let pass=document.getElementById("passwordInput").value;
+            if(user=="admin@guelphhumber.ca" && pass=="admin")
+            {
+                alert("Login Sucsessful");
+                return true;
+                
+            }
+            else
+            {
+                alert("Incorrect Username or Password, Please Try Again");
+                return false;
+            }
+
+        }
+  </script>
+ 
+    <div class="bodyPara">
+        <h1>Coveted Canines and Creatures Foster Application Form</h1>
+        <p>Thank you for considering becoming a foster parent! It is a truly rewarding experience that is crucial <br> 
+            in helping to save homeless dogs’ lives..</p>
+    </div>
+
+    <div class= fosterForm>
+            <form onsubmit="alert('Registration Sucseusful')" method="post" enctype=”multipart/form-data” name=”EmailForm”> 
+               <table class="formTable">
+                    <tbody>
+                        
+                        <tr>
+                            <td><label for="firstName">First Name</label></td> 
+                            <td><input id="textbox" type="text" name="firstName" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="lastName">Last Name</label></td> 
+                            <td><input id="textbox" type="text" name="lastName" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="lastName">Date of Birth</label></td> 
+                            <td><input id="textbox" type="date" name="dob" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="gender">Gender</label></td> 
+                            <td><input id="roundButton" type="radio" name="gender" value="Male"> Male
+                                <input id="roundButton" type="radio" name="gender" value="Female"> Female
+                                <input id="roundButton" type="radio" name="gender" value="Other"> Other
+                                <input id="roundButton" type="radio" name="gender" value="Prefer Not to Say"> Prefer Not to Say
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="email">Email</label></td> 
+                            <td><input id="textbox" type="email" name="email" placeholder="email@email.com" size="30" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="intrest">Intrests</label></td> 
+                            <td><input id="checkbox" type="checkbox" name="interest" value="FRANKIE">FRANKIE <br>
+                                <input id="checkbox" type="checkbox" name="interest" value="PANDA">PANDA <br>
+                                <input id="checkbox" type="checkbox" name="interest" value="BELLA">BELLA <br>
+                                <input id="checkbox" type="checkbox" name="interest" value="NURO">NURO <br>
+                                <input id="checkbox" type="checkbox" name="interest" value="PEPPER">PEPPER <br>
+                                <input id="checkbox" type="checkbox" name="interest" value="CICI">CICI <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="tickets">Size of Home</label></td> 
+                            <td><select id="selectBox" name="House"> 
+                                    <option value="-----">Select</option>
+                                    <option value="Appartment">Appartment</option> 
+                                    <option value="Condo">Condo</option> 
+                                    <option value="Townhouse">Townhouse</option> 
+                                    <option value="Detatched Home">Detatched Home</option> 
+                                    <option value="Mansion">Mansion</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="reciveEmails">Would you like to Recive Product Emails?</label></td> 
+                            <td><input id="checkbox" type="checkbox" name="reciveEmails" value="Yes"></td>
+                        </tr>
+                        <tr id="button">
+                            <td colspan="2">
+                                <input id="button" type="submit">
+                                <input id="button" type="reset">
+                            </td>
+                        </tr>
+
+                    </tbody>
+               </table> 
+            </form>
+    </div>
+
+
+
+
+  
+  
+  
+    <div class="footer">
+        <table>
+          <tr>
+            <td class="container"><img src="images/email.png" alt="email"></td>
+            <td class="container">INFO@COVETEDCANINES.ORG |</td>
+            <td class="container"><img src="images/phone-call.png" alt="phone" ></td>
+            <td class="container">(855) 801-5706 |</td>
+            <td class="container"><img src="images/pin.png" alt="email"></td>
+            <td class="container">81-800 Avenue 51, Indio, CA 92201</td>
+            </tr>
+        </table>
+              
+        <p id="missionPara">Coveted Canines and Creatures is a not-for-profit organization that rescues animals that are at high risk of <br>
+           being euthanized and are vulnerable to abuse. We are run wholly run by unpaid volunteers who donate their <br>
+           time and expertise for the love of animals.</p>
+        
+        <table id=socialsTable>  
+          <tr>
+            <td class="container"><a href="https://twitter.com/covetedcanines" target="_blank"><img id="socialImg" src="images/twitter.png" alt="twitter icon"></a></td>
+            <td class="container"><a href="https://www.facebook.com/covetedcanines/" target="_blank"><img id="socialImg" src="images/facebook.png" alt="facebook icon"></a></td>
+            <td class="container"><a href="https://www.instagram.com/covetedcanines/" target="_blank"><img id="socialImg" src="images/instagram.png" alt="instagram"></a></td>
+          </tr>
+      </table>
+      <table>
+        <tr>
+          <td id="footerInfo" colspan="2"><p id="footerPara">&copy;Coveted Canines  - All Rights Reserved | Privacy Policy </p></td>
+        </tr>
+        <tr>
+        <td id="footerInfo" colspan="7"><p id="footerPara"> Assignment 3 - Jasmyn Butt, Alessia Caracciolo, William Sampson - MDST*3250</p></td>
+      </tr>    
+      </table>
+      </div>
+      
+</body>
+</html>
